@@ -6,3 +6,4 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
+console.log(ingredients);
