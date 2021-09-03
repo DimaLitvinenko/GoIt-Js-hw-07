@@ -12,3 +12,25 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listRef = document.querySelector('#gallery');
+// const markup = images
+//   .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="750" height="500"/></li>`)
+//   .join("");
+// console.log(markup);
+
+listRef.insertAdjacentHTML(
+  'beforeend',
+  images
+  .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}" width="750" height="500"/></li>`)
+  .join("")
+);
+
+console.log(listRef.children);
+
+
+listRef.classList.add('list__row');
+listRef.style.listStyle = 'none';
+
+
+
