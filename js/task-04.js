@@ -3,11 +3,11 @@ const incrementBtn = document.querySelector('button[data-action="increment"]');
 const countNumber = document.getElementById('value');
 
 let counterValue = 0;
-const decrement = () => (countNumber.textContent = counterValue -= 1);
-const increment = () => (countNumber.textContent = counterValue += 1);
+const decrementButtonClickHandler = () => (countNumber.textContent = counterValue -= 1);
+const incrementButtonClickHandler = () => (countNumber.textContent = counterValue += 1);
 
-decrementBtn.addEventListener('click', decrement);
-incrementBtn.addEventListener('click', increment);
+decrementBtn.addEventListener('click', decrementButtonClickHandler);
+incrementBtn.addEventListener('click', incrementButtonClickHandler);
 
 
 const container = document.getElementById('counter');
@@ -21,7 +21,7 @@ resetBtn.style.color = 'white';
 
 container.after(resetBtn);
 
-const resetValue = () => {
+const resetButtonClickHandler = () => {
     const isConfirm = confirm('Do you want to reset this value?');
 
     if (isConfirm === true) {
@@ -29,4 +29,4 @@ const resetValue = () => {
     }
 }
 
-resetBtn.addEventListener('click', resetValue);
+resetBtn.addEventListener('click', resetButtonClickHandler);
