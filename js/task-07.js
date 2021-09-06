@@ -4,6 +4,6 @@ console.log(inputEl.value);
 const textEl = document.getElementById('text');
 console.log(textEl.style);
 
-const valueRangeHandler = (event) => textEl.style.fontSize = `${event.currentTarget.value}px`;
+const valueRangeHandler = event => textEl.style.fontSize = `${event.currentTarget.value}px`;
 
-inputEl.addEventListener('input', valueRangeHandler);
+inputEl.addEventListener("input", valueRangeHandler);
