@@ -16,7 +16,7 @@ const createBoxesHandler = amount => {
             boxSize += 10;
             return `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: rgb(${colorHandler()});" ></div>`;
         })
-        .join('');
+        .join('')
 };
 
 const destroyBoxesHandler = () => {
