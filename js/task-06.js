@@ -23,3 +23,7 @@ const inputValidationHandle = event => {
 
 inputEl.addEventListener('blur', inputValidationHandle);
 
+
+// `border` становиться зеленым только,
+//  когда введённое количество символов строго равно символам указаным в атрибуте инпута `data-length`
+//  не больше и не меньше
