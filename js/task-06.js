@@ -1,4 +1,4 @@
-const inputEl = document.querySelector('#validation-input');
+const inputEl = document.getElementById('validation-input');
 console.log(inputEl);
 
 const inputLeng = inputEl.dataset.length;
@@ -9,16 +9,15 @@ const inputValidationHandle = event => {
     console.log(dataLeng);
 
     if (inputLeng <= dataLeng) {
-        inputEl.classList.remove("invalid");
-        return inputEl.classList.add("valid");
+        // inputEl.classList.remove("invalid");
+        return inputEl.classList.toggle("valid");
 
     } else if (inputLeng > dataLeng && dataLeng !== 0) {
-        inputEl.classList.remove("valid");
-        return inputEl.classList.add("invalid");
-
-    } else {
-        return inputEl.classList.remove("invalid");
-    };
+        // inputEl.classList.remove("valid");
+        return inputEl.classList.toggle("invalid");
+    } 
+        
+    
 };
 
 inputEl.addEventListener('blur', inputValidationHandle);
