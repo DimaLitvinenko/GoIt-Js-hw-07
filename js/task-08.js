@@ -1,5 +1,6 @@
 
-
+// Переписать задание 8, реализовав функционал, при котором дивы не перерисовываются,
+// а дорисовываются к отрендеренным ранее.
 
 const controlRefs = {
     input: document.querySelector('input'),
@@ -9,13 +10,11 @@ const controlRefs = {
 };
 const { input, render, destroy, boxes } = controlRefs;
 
-boxes.style.paddingTop = 10;
-
 
 
 const createBoxesHandler = (amount) => {
-    amount = Number(input.value);
-    // console.log(`input.value:`, amount);
+    amount = input.value;
+    console.log(`input.value:`, amount);
 
     let boxSize = 30;
     const elements = [];
@@ -57,8 +56,6 @@ const createBoxesHandler = (amount) => {
 // };
 
 
-
-
 const destroyBoxesHandler = () => {
     boxes.innerHTML = '';
 };
@@ -77,5 +74,3 @@ destroy.addEventListener('click', destroyBoxesHandler);
 
 
 
-// Переписать задание 8, реализовав функционал, при котором дивы не перерисовываются, 
-// а дорисовываются к отрендеренным ранее.
