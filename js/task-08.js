@@ -15,16 +15,17 @@ boxes.style.paddingTop = 10;
 
 const createBoxesHandler = (amount) => {
     amount = Number(input.value);
-    console.log(`input.value:`, amount);
+    // console.log(`input.value:`, amount);
 
     let boxSize = 30;
     const elements = [];
     for (let i = 1; i <= amount; i += 1) {
-        console.log(amount.length);
-        console.log(i); // = (input.value === кол-во элементов)
+
+        console.log(`amount`, amount);
+        console.log(`i`, i); // = (input.value === кол-во элементов)
         // console.log(amount === i);
         boxSize += 10;
-
+       
         const boxEl = document.createElement('div');
         boxEl.style.width = `${boxSize}px`;
         boxEl.style.height = `${boxSize}px`;
@@ -34,12 +35,10 @@ const createBoxesHandler = (amount) => {
         boxEl.style.marginTop = ('5px');
             
         elements.push(boxEl);
-
-    };
-    // if (elements.length === amount) {
         
-    // }
-    // console.log(elements);
+    };
+    
+    console.log(elements);
     return boxes.append(...elements);
     
 };
